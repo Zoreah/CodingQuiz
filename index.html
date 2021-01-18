@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="./style.css" />
-    <title>Code Quiz</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <title>Coding Quiz</title>
 </head>
 
 <div class="container">
@@ -15,11 +16,49 @@
 
 
 </div>
+<script src="./script.js"></script>
 
 <body>
+
+    <nav class="navbar navbar-light">
+        <a class="navbar-brand" href="scores.html">View Scores</a>
+        <a class="navbar-brand form-inline" id="timer">Score:30</a>
+    </nav>
+    
     <div id="quiz"></div>
-    <button id="showQuiz">Start Quiz</button>
+    
     <div id="quiz"></div>
+    <div class="jumbotron">
+
+        <h2>Let's Get Started!</h2>
+    
+        <p><a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a></p>
+    
+      </div>
+
+      <div id='choices'>
+          <button id='0'type="button" class="btn btn-success w-50"></button>
+          <button id='1'type="button" class="btn btn-success w-50"></button>
+          <button id='2'type="button" class="btn btn-success w-50"></button>
+          <button id='3'type="button" class="btn btn-success w-50"></button>
+      
+        </div>
+
+      </div>
+
+      <div id='afterQuiz' class="jumbotron mt-3 text-center">
+          <h3 class="display-4">Quiz Over!</h3>
+          <h4 class='display-4">Final Score: <span id="finalScoreDisplay"></span></h4>
+          <hr class="my-4">
+          <form id='User-form' class="form-group">
+              <label class="col-form-label" for="inputDefault">Add Name to Scoreboard Here!</label>
+              <input type="text" class="form-control" placeholder="Name" id="user-text">
+              <button class="btn btn-secondary btn-lg m-4" id = "userSubmit" href="scores.html">Submit<a></button>
+          </form>
+      </div>
+      
+    
+
 
     <button onclick="myFunction()">Answer</button>
 
