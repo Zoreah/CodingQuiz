@@ -13,7 +13,11 @@
     <table id="leader-board" class="table table-hover"></table>
 </body>
 
-<table id="leader-board">
+<table border="1 leader-board>" class="table table-hover"
+    <caption>High Score Sheet</caption>
+</table>
+
+<table id="leader-board" class="table table-hover">
     <thead>
         <tr>
             <th scope="col"></th>
@@ -23,6 +27,15 @@
         </tr>
     </thead>
     <tbody id="leaders">
-        
+
     </tbody>
 </table>
+
+<div id="noscore-warning" class="alert alert-dismissible alert-warning text-center">
+</div>
+
+<section class="text-center">
+    <button id="start-over" type="button" class="btn btn-info">Try Again!</button>
+    <button id="clearBoard" type="button" class="btn btn-info">Clear Score!</button>
+</section>
+<script src="../script.js"></script>
