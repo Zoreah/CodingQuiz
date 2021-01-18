@@ -2,9 +2,18 @@ var highScoreList = document.querySelector("#high-score-list");
 var clearScoreBtn = document.querySelector("#clear-high-scores");
 var goBackBtn = document.querySelector("#go-back");
 
-//get high score 
+//get scores 
 
-var highScoresArray = JSON.parse(localStorage.getItem("scores"));
+var allScores = localStorage.getItem("allScores");
+allScores = JSON.parse(allScores);
+
+if (allScores !== null) {
+    for (var i = 0; i < allScores.length; i++) {
+        var createLi = document.createElement("li");
+        createLi.textContent = allScores[i].initials + " " + allScores[i].score;
+        highScore.appendChild(createLi);
+    }
+}
 
 function showTopScores() {
     for (var i = 0; i < 5; i++) {
@@ -21,6 +30,7 @@ function showTopScores() {
 
 clearScoreBtn.addEventListener('click', function() {
     localStorage.clear();
+    location.reload();
     
 });
 

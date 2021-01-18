@@ -10,9 +10,32 @@
     <title>Coding Quiz</title>
 </head>
 
-<div class="container">
+<body class="body">
+
     <form>
-        <h1> Coding Quiz </h1>
+        <h1 class="text-center">Coding Quiz </h1>
+        <div class="container">
+        <div class="row">
+        <div class="col-sm-12">
+            <h2 class="text-center">Let's Get Started!</h2>
+            
+            <hr />
+            <div class="jumbotron">
+
+        
+    
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a></p>
+            
+              </div>
+            <div class="row">
+                <div class="col-10 col-sm-8 mx-auto w-50 p-3 text-blue text-center border" id="displayQuestion">
+                    "The set of markup symbols or codes placed in a file that is intended for display on a web page ____",
+                </div>
+                <div class="col-10 col-sm-8 mx-auto w-50 p-3 text-blue text-center border" id="displayOptions">options: <ul>"Css", "Script", "Html", "Email"</ul></div>
+            </div>
+
+        </div>
+        </div>
 
 
 </div>
@@ -20,21 +43,12 @@
 
 <body>
 
-    <nav class="navbar navbar-light">
-        
-        <a class="navbar-brand form-inline" id="timer">Score:30</a>
-    </nav>
+    
 
     <div id="quiz"></div>
     
     <div id="quiz"></div>
-    <div class="jumbotron">
-
-        <h2>Let's Get Started!</h2>
     
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Start Quiz</a></p>
-    
-      </div>
 
       <div id='choices'>
           <button id='0'type="button" class="btn btn-success w-50"></button>
@@ -65,12 +79,7 @@
     <button id="submit">Get Results</button>
     <div id="results"></div>
 
-    <script>
-
-        function myFunction() {
-            document.getElementById("demo").innerHTML = "Hello World";
-        }
-    </script>
+   
     <p id="answers"></p>
     <script>
         function myFunction() {
@@ -82,6 +91,8 @@
     <a class="navbar-brand" href="scores.html">View Scores</a>
     <div id="results"></div>
     <script src="./script.js"></script>
+
+
 </body>
 
 </html>

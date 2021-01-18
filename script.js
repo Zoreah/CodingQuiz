@@ -47,14 +47,14 @@ var quizQuestions = [
 
         question: "A block of organized, reusable code that is used to perfrom a single, related action ____",
         options: ["Function", "Source", "Programming", "Style"],
-        answer: "Function",
+        answer: "Function"
     },
 {
         question: "What does DNS stand for?",
         options: ["Do not send", "Domain name system", "Domain name server", "Down network system"],
-        answer: "Domain name system",
-    }
-],
+        answer: "Domain name system"
+    },
+];
 
 //Time alotted to answer question
 
