@@ -64,5 +64,67 @@ function quizOver() {
     quizContainer.classList.add("d-none");
     timer.classList.add("d-none");
     finalScore.textContent = "Final Score: " + secondsLeft;
+
 }
 
+function showQuestions () {
+    if (q >= quizQuestions.length) {
+        quizOver ();
+    } else {
+        question.textContent = quizQuestions[q].question;
+        optionOne.textContent = quizQuestions[q].options[0];
+        optionTwo.textContent = quizQuestions[q].options[1];
+        optionThree.textContent = quizQuestions[q].options[2];
+        optionFour.textContent = quizQuestions[q].options[3];
+    }
+}
+
+//Compare correct answer to answer submitted
+optionList.addEventListener('click', function (event) {
+    var correctAnswer = quizQuestions[q].answer;
+    var userAnswer = (event.target);
+    console.log(userAnswer.innerHTML);
+    console.log(correctAnswer);
+    var resultMessage = document.createElement("h2");
+    if (userAnswer.innerHTML === correctAnswer) {
+        resultMessage.textContent = "Kudos!";
+        choiceList.appendChild(resultMessage);
+        setTimeout(function () {
+            resultMessage.textContent= " ";
+            q++
+            showQuestions();
+        }, 500);
+    } else {
+        resultMessage.textContent = "Nope!";
+        choiceList.appendChild(resultMessage);
+        setTimeout(function () {
+            resultMessage.textContent= " ";
+            q++
+            showQuestions();
+            secondsLeft = secondsLeft -15;
+        }, 500);
+    }
+})
+
+    function score() {
+        var timeInterval = setInterval(function()  {
+            secondsLeft--;
+            timer.textContent = "Score:" + secondsLeft;
+
+            if (secondsLeft === 0) {
+                quizOver();
+                clearInterval(timerInterval);
+            }
+        }, 400);
+            
+    },
+        
+startBtn.addEventListener('click', function() {
+    startContainer.classList.add("d-none");
+    quizContainer.classList.remove("d-none");
+    showQuestions();
+    score();
+})
+    }
+
+}
